@@ -33,7 +33,9 @@ exp_name : str
     name of exp to be loaded
 ckpt_type
     which saved model ckpt should be used for prediction?
-    choose e.g. 'last' or 'best_epoch=123'
+    choose e.g. 'last', 'best'
+    Take care, if multiple 'best' epochs exist the last one is automatically chosen.
+    For spcific epochs you should use e.g. 'best_epoch=123'
 train_results : bool
     run also predictions for training set?
     Default: False (only predictions for test set are computed)
@@ -43,7 +45,7 @@ save_imgs : bool
 
 log_dir = 'lightning_logs'
 exp_name = '20220829_155222_abd_wgangp_tf_0_dim_512_pe_add_img_128_z_16'
-ckpt_type = 'best_epoch=0'
+ckpt_type = 'best'
 train_results = False
 save_imgs = False
 
@@ -68,7 +70,6 @@ with open(cfg_path, 'r') as stream:
 # # add/update parameters specified above
 cfg.update({'log_dir': log_dir}) 
 cfg.update({'exp_name': exp_name}) 
-cfg['ckpt_type'] = ckpt_type
 cfg['train_results'] = train_results
 cfg['save_imgs'] = save_imgs
 cfg.update({'device': torch.cuda.current_device()}) 
@@ -76,8 +77,10 @@ cfg.update({'device': torch.cuda.current_device()})
 # # Set ckpt path to run predictions from 
 ckpt_dir = os.path.join(log_dir, exp_name, 'checkpoints')
 ckpts_paths = utils.getListOfFiles(ckpt_dir)
+ckpts_paths.sort(key=utils.natural_keys)
 matching = [s for s in ckpts_paths if ckpt_type in s]
-cfg['ckpt_path_pred'] = matching[0]
+cfg['ckpt_path_pred'] = matching[-1]
+cfg['ckpt_type'] = cfg['ckpt_path_pred'][cfg['ckpt_path_pred'].rindex('/')+1:-5]
 # ***end***********************************************************************
 
 
@@ -96,8 +99,8 @@ cfg.update({'n_imgs': cfg['n_imgs_in'] + cfg['n_imgs_out']})
 
 # cfg.update({'sample_type': 'semirand'}) 
 # cfg.update({'rem_dup': False})
-# cfg.update({'img_path_dist': 5}) 
-# cfg.update({'img_path_skip': 4})
+# cfg.update({'img_path_dist': 1}) 
+# cfg.update({'img_path_skip': 1})
 cfg.update({'sample_factor': 1.00})
 cfg.update({'sample_range': None}) 
 # cfg.update({'val_test_shuffle': True})

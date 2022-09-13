@@ -154,13 +154,13 @@ elif cfg['data_name'] == 'dnt':
     cfg['time_unit'] = 'd'
 cfg['time_diff']  = cfg['data_time']['time_end']-cfg['data_time']['time_start']
 cfg['factor_to_unit'] = utils.get_seconds_factor_to_time_unit(cfg['time_unit'])
-cfg['pe_max_len'] = math.ceil(cfg['time_diff'].total_seconds()/cfg['factor_to_unit'])
+cfg['pe_max_len'] = math.ceil(cfg['time_diff'].total_seconds()/cfg['factor_to_unit'])+1
 # ***end***********************************************************************
 
 cfg['nworkers'] = 8 
 cfg['img_ext'] = ['png', 'jpg', 'tif']
-cfg['img_size'] = 256
-cfg['batch_size'] = 32
+cfg['img_size'] = 128
+cfg['batch_size'] = 8
 cfg['n_imgs_in'] = 3
 cfg['n_imgs_out'] = 1 
 
@@ -170,9 +170,9 @@ cfg['n_imgs'] = cfg['n_imgs_in'] + cfg['n_imgs_out']
 
 cfg['sample_type'] = 'semirand' 
 cfg['rem_dup'] = False 
-cfg['img_path_dist'] = 5
-cfg['img_path_skip'] = 4
-cfg['sample_factor'] = 0.5 
+cfg['img_path_dist'] = 1
+cfg['img_path_skip'] = 1
+cfg['sample_factor'] = 1.0 
 cfg['sample_range'] = None 
 cfg['val_test_shuffle'] = True
 cfg['normalize'] = '01'
@@ -330,10 +330,10 @@ early_stop : bool
 save_ckpts_last : bool
     Save last epoch?
     Default: True
-save_ckpts_best : bool
-    Save best epoch?
+save_ckpts_best : int
+    How many top-k ckpts should be saved?
     This is measured by means of val_loss
-    Default: True
+    Default: 1
 exp_name : 'str'
     Name of experiment folder in log_dir 
     Automatically build from start time of the experiment and some essential parameters
@@ -356,16 +356,16 @@ cfg['losses_w'] = {'weight_adv': 1,
                    'weight_msssim': 1, 
                    'weight_percep': 1,} 
 cfg['final_actvn'] = 'sigmoid'
-cfg['max_epochs'] = 100 
+cfg['max_epochs'] = 1 
 cfg['gpus'] = 1
 cfg['precision'] = 32 
 cfg['fast_dev_run'] = False
-cfg['limit_train_batches'] = 1.00 
-cfg['limit_val_batches'] = 1.00
-cfg['limit_test_batches'] = 1.00
+cfg['limit_train_batches'] = 0.05 
+cfg['limit_val_batches'] = 0.05
+cfg['limit_test_batches'] = 0.05
 cfg['early_stop'] = False
 cfg['save_ckpts_last'] = True
-cfg['save_ckpts_best'] = True 
+cfg['save_ckpts_best'] = 1 
 
 # ***start*********************************************************************
 # # Exp Name
