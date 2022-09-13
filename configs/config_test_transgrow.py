@@ -44,7 +44,7 @@ save_imgs : bool
 '''
 
 log_dir = 'lightning_logs'
-exp_name = '20220829_155222_abd_wgangp_tf_0_dim_512_pe_add_img_128_z_16'
+exp_name = '20220913_175741_abd_wgangp_tf_0_dim_512_pe_add_img_128_z_16'
 ckpt_type = 'best'
 train_results = False
 save_imgs = False

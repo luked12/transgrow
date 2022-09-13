@@ -8,7 +8,7 @@ import torch
 from torchvision.utils import make_grid
 import numpy as np
 import os
-
+import re
 
 # =============================================================================
 # generate a grid of video frames
@@ -254,3 +254,20 @@ def get_seconds_factor_to_time_unit(time_unit):
     else:
         print('Wrong time_unit specified.')
     return factor_to_unit
+
+
+# ============================================================================= 
+def atoi(text):
+    return int(text) if text.isdigit() else text
+
+def natural_keys(text):
+    '''
+    https://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside
+    alist.sort(key=natural_keys) sorts in human order
+    http://nedbatchelder.com/blog/200712/human_sorting.html
+    (See Toothy's implementation in the comments)
+    '''
+    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
+
+
+# ============================================================================= 

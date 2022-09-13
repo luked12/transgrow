@@ -356,13 +356,13 @@ cfg['losses_w'] = {'weight_adv': 1,
                    'weight_msssim': 1, 
                    'weight_percep': 1,} 
 cfg['final_actvn'] = 'sigmoid'
-cfg['max_epochs'] = 1 
+cfg['max_epochs'] = 1000 
 cfg['gpus'] = 1
 cfg['precision'] = 32 
 cfg['fast_dev_run'] = False
-cfg['limit_train_batches'] = 0.05 
-cfg['limit_val_batches'] = 0.05
-cfg['limit_test_batches'] = 0.05
+cfg['limit_train_batches'] = 0.01 
+cfg['limit_val_batches'] = 0.01
+cfg['limit_test_batches'] = 0.01
 cfg['early_stop'] = False
 cfg['save_ckpts_last'] = True
 cfg['save_ckpts_best'] = 1 
