@@ -9,6 +9,13 @@ A suitable conda environment can be installed from the provided package file env
     conda env create -f environment.yaml
     conda activate transgrow
 
+## Configurations
+
+This project is structured in such a way that all adjustable variables are stored in two configuration files as a dictionary.
+- Model training: ./configs/config_main_transgrow.py
+- Model testing: ./configs/config_test_transgrow.py
+
+
 ## Data
 
 #### General
