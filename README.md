@@ -79,11 +79,16 @@ All plants are divided into train, val, and test set.
 
 
 ## Training
-To train a TransGrow models with configurations from ./configs/config_main_transgrow.py use the script ./main_transgrow.py 
+To train a TransGrow models with configurations from ./configs/config_main_transgrow.py use
 
     python ./main_transgrow.py
 
 
 ## Testing
+To test a previously trained model with configurations from ./configs/config_test_transgrow.py use
+
+    python ./test_transgrow.py
+    
+
 
 
