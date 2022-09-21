@@ -12,6 +12,8 @@ A suitable conda environment can be installed from the provided package file env
 ## Configurations
 
 This project is structured in such a way that all adjustable variables are stored in two configuration files as dictionary.
+For any details to the variables, please have a look into these files.
+
 - Model training: ./configs/config_main_transgrow.py
 - Model testing: ./configs/config_test_transgrow.py
 
@@ -79,16 +81,21 @@ All plants are divided into train, val, and test set.
 
 
 ## Training
-To train a TransGrow models with configurations from ./configs/config_main_transgrow.py use
+To train a TransGrow model run 
 
-    python ./main_transgrow.py
+    python main_transgrow.py
 
+Thereby the settings from ./configs/config_main_transgrow.py are used.
+To resume a previous training, please enter the experiment name there and ensure, that architecture parameters are consistent.
 
 ## Testing
-To test a previously trained model with configurations from ./configs/config_test_transgrow.py use
+To test a previously trained model run
 
-    python ./test_transgrow.py
+    python test_transgrow.py
     
+You need to specify at least the log dir and the experiment name which you want to evaluate in ./configs/config_test_transgrow.py 
 
+About the rest: Per default all parameters used to train the model are also used for testing.
+But one advantage of TransGrow is that especially the data parameters (e.g. the number of input frames, or the time interval between them) can differ from the training. So configuration parameters, which control the shape of the data, can be updated here as desired.
 
 
