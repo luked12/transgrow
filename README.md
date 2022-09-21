@@ -11,7 +11,7 @@ A suitable conda environment can be installed from the provided package file env
 
 ## Configurations
 
-This project is structured in such a way that all adjustable variables are stored in two configuration files as a dictionary.
+This project is structured in such a way that all adjustable variables are stored in two configuration files as dictionary.
 - Model training: ./configs/config_main_transgrow.py
 - Model testing: ./configs/config_test_transgrow.py
 
