@@ -158,8 +158,8 @@ cfg['pe_max_len'] = math.ceil(cfg['time_diff'].total_seconds()/cfg['factor_to_un
 
 cfg['nworkers'] = 8 
 cfg['img_ext'] = ['png', 'jpg', 'tif']
-cfg['img_size'] = 128
-cfg['batch_size'] = 8
+cfg['img_size'] = 256
+cfg['batch_size'] = 32
 cfg['n_imgs_in'] = 3
 cfg['n_imgs_out'] = 1 
 
@@ -359,9 +359,9 @@ cfg['max_epochs'] = 1000
 cfg['gpus'] = 1
 cfg['precision'] = 32 
 cfg['fast_dev_run'] = False
-cfg['limit_train_batches'] = 0.01 
-cfg['limit_val_batches'] = 0.01
-cfg['limit_test_batches'] = 0.01
+cfg['limit_train_batches'] = 1.0 
+cfg['limit_val_batches'] = 1.0
+cfg['limit_test_batches'] = 1.0
 cfg['early_stop'] = False
 cfg['save_ckpts_last'] = True
 cfg['save_ckpts_best'] = 1 
