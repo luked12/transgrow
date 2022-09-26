@@ -1,6 +1,6 @@
 # TransGrow
 
-Time dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer (GCPR 22)
+[Time dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer](https://doi.org/10.1007/978-3-031-16788-1_30) (GCPR 22)
 
 ## Requirments
 
@@ -58,7 +58,7 @@ All plants are divided into train, val, and test set.
 
 #### Use Arabidopsis or MixedCrop data
 
-Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subset of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home) **'mix'** dataset.
+Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subsets of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home) **'mix'** dataset.
 
 - Change in ./configs/config_main_transgrow.py:
 
