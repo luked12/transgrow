@@ -58,7 +58,7 @@ All plants are divided into train, val, and test set.
 
 #### Use Arabidopsis or MixedCrop data
 
-Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subsets of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop]([https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/metadata/751c10c4-b6dc-4bcc-bc8c-c0fc5920887a)) **'mix'** dataset.
+Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subsets of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/metadata/751c10c4-b6dc-4bcc-bc8c-c0fc5920887a) **'mix'** dataset.
 
 - Change in ./configs/config_main_transgrow.py:
 
