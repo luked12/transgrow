@@ -2,7 +2,7 @@
 
 [Time dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer](https://doi.org/10.1007/978-3-031-16788-1_30) (GCPR 22)
 
-## Requirments
+## Requirements
 
 A suitable conda environment can be installed from the provided package file environment.yml
 
@@ -11,7 +11,7 @@ A suitable conda environment can be installed from the provided package file env
 
 ## Configurations
 
-This project is structured in such a way that all adjustable variables are stored in two configuration files as dictionary.
+This project is structured in such a way that all adjustable variables are stored in two configuration files as dictionary.  
 For any details to the variables, please have a look into these files.
 
 - Model training: ./configs/config_main_transgrow.py
@@ -58,7 +58,7 @@ All plants are divided into train, val, and test set.
 
 #### Use Arabidopsis or MixedCrop data
 
-Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subsets of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home) **'mix'** dataset.
+Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subsets of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop]([https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/metadata/751c10c4-b6dc-4bcc-bc8c-c0fc5920887a)) **'mix'** dataset.
 
 - Change in ./configs/config_main_transgrow.py:
 
