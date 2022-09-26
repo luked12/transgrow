@@ -57,27 +57,13 @@ All plants are divided into train, val, and test set.
       ├── Arabidopsis
       └── ...
 
-#### Use MixedCrop data set
+#### Use Arabidopsis or MixedCrop data
 
-- In ./configs/config_main_transgrow.py:
+Please find here a small subset of the Arabidopsis dataset *cfg['data_name'] = 'abd'* and the MixedCrop dataset *'mix'*.
 
-        cfg['data_name'] = 'mix'
-        
-- Download Data from PhenoRoam
-- Patch Fields (provide code here)
-- Sort Data (provide code here)
+- Change in ./configs/config_main_transgrow.py:
 
-
-#### Use Arabidopsis data
-- In ./configs/config_main_transgrow.py:
-
-        cfg['data_name'] = 'abd'
-        
-- Download Data from xyz
-- Sort Data (provide code here)
-
-
-#### Use your own dataset
+        cfg['data_name'] = 'mix' # or 'abd'
 
 
 ## Training
