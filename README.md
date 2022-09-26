@@ -24,11 +24,10 @@ For any details to the variables, please have a look into these files.
 
 In the following, we always use the term plant images to refer not only to datasets containing images with single plants, but also to field patches or satellite images that show a region of multiple plants per image.
 
-The plant images must be stored as a multi-temporal time series in folders. This means that for each plant/region a folder exists that contains images of all available time points of this plant/region. 
+The plant images must be sorted as a multi-temporal time series in folders. This means that for each plant/region a folder exists that contains images of all available time points of this plant/region. 
 
 The images should be of quadratic size and the file names must contain at least one date, or even date+time, if modeling unit is to be finer than daily. From this time information, the temporal positions are calculated. 
 The number of images per time series is flexible, i.e. not every time point has to exist for every plant. 
-
 All plants are divided into train, val, and test set.
 
     ./
@@ -59,7 +58,7 @@ All plants are divided into train, val, and test set.
 
 #### Use Arabidopsis or MixedCrop data
 
-Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multitemporal sorted subset of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home) **'mix'** dataset.
+Please find [here](https://uni-bonn.sciebo.de/s/Prq6Ga72sTErNXT) a small, multi-temporal sorted subset of the [Arabidopsis](https://doi.org/10.5281/zenodo.168158) **'abd'** and the [MixedCrop](https://phenoroam.phenorob.de/geonetwork/srv/eng/catalog.search#/home) **'mix'** dataset.
 
 - Change in ./configs/config_main_transgrow.py:
 
@@ -83,5 +82,7 @@ You need to specify at least the log dir and the experiment name which you want 
 
 About the rest: Per default all parameters used to train the model are also used for testing.
 But one advantage of TransGrow is that especially the data parameters (e.g. the number of input frames, or the time interval between them) can differ from training. So configuration parameters, which control the shape of the data, can be updated here as desired.
+
+## Reference
 
 
