@@ -20,7 +20,7 @@ Config for pred_transgrow.py as dictionary 'cfg'.
 5. [OPTIONAL] Set font for figures
 
 # *****************************************************************************
-Config elements framed with # **** are are dependent on other elements
+Config elements framed with # **** are dependent on other elements
 # *****************************************************************************
 '''
 
