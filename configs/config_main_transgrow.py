@@ -132,7 +132,7 @@ cfg['data_name'] = 'abd'
 
 # ***start*********************************************************************
 if cfg['data_name'] == 'abd':
-    cfg['img_dir'] = 'data/arabidopsis_resized_256/' 
+    cfg['img_dir'] = 'data/Arabidopsis/' 
     cfg['data_time'] = {'time_start': datetime.strptime('2015-12-14--12-54-06', '%Y-%m-%d--%H-%M-%S'), 
                         'time_end': datetime.strptime('2016-01-18--09-05-40', '%Y-%m-%d--%H-%M-%S')}
     cfg['time_unit'] = 'h'
@@ -142,8 +142,7 @@ elif cfg['data_name'] == 'grf':
                         'time_end': datetime.strptime('2021-09-08', '%Y-%m-%d')}
     cfg['time_unit'] = 'd'
 elif cfg['data_name'] == 'mix':
-    # cfg['img_dir'] = 'data/Mix_RGB_CKA_2020/plantsort_patch_128/'
-    cfg['img_dir'] = 'data/Mix_RGB_CKA_2020/plantsort_patch_484/'
+    cfg['img_dir'] = 'data/MixedCrop/'
     cfg['data_time'] = {'time_start': datetime.strptime('2020-04-02', '%Y-%m-%d'), 
                         'time_end': datetime.strptime('2020-07-23', '%Y-%m-%d')}
     cfg['time_unit'] = 'd'
@@ -505,7 +504,7 @@ else:
 # # Trainings transformation
 if cfg['data_name'] == 'abd':
     # params for SinglePlantRotations Augmentation
-    cfg['bg_path'] = 'data/arabidopsis_resized_256/bg_cleaner/'
+    cfg['bg_path'] = 'data/Arabidopsis/bg/'
     cfg['spec_aug_fg'] = False
     cfg['spec_aug_bg'] = False
     
