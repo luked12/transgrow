@@ -44,7 +44,7 @@ save_imgs : bool
 '''
 
 log_dir = 'lightning_logs'
-exp_name = '20220913_175741_abd_wgangp_tf_0_dim_512_pe_add_img_128_z_16'
+exp_name = '20220926_201012_abd_wgangp_tf_0_dim_512_pe_add_img_128_z_16'
 ckpt_type = 'best'
 train_results = False
 save_imgs = False
@@ -89,9 +89,9 @@ cfg['ckpt_type'] = cfg['ckpt_path_pred'][cfg['ckpt_path_pred'].rindex('/')+1:-5]
 typically data params or transformations are varied, BUT NOT img_size
 
 '''
-cfg.update({'nworkers': 8}) 
-cfg.update({'batch_size': 8}) 
-cfg.update({'n_imgs_in': 3})
+# cfg.update({'nworkers': 8}) 
+# cfg.update({'batch_size': 8}) 
+# cfg.update({'n_imgs_in': 3})
 
 # *****************************************************************************
 cfg.update({'n_imgs': cfg['n_imgs_in'] + cfg['n_imgs_out']})  
@@ -101,8 +101,8 @@ cfg.update({'n_imgs': cfg['n_imgs_in'] + cfg['n_imgs_out']})
 # cfg.update({'rem_dup': False})
 # cfg.update({'img_path_dist': 1}) 
 # cfg.update({'img_path_skip': 1})
-cfg.update({'sample_factor': 1.00})
-cfg.update({'sample_range': None}) 
+# cfg.update({'sample_factor': 1.00})
+# cfg.update({'sample_range': None}) 
 # cfg.update({'val_test_shuffle': True})
 # cfg.update({'normalize': '01'}) 
 
