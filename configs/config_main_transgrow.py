@@ -18,7 +18,7 @@ Config for main_transgrow.py as dictionary 'cfg'.
 Find list and description of all elements in sections below.
 
 # *****************************************************************************
-Config elements framed with # **** are are dependent on other elements
+Config elements framed with # **** are dependent on other elements
 # *****************************************************************************
 '''
 
