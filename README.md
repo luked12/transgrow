@@ -84,5 +84,5 @@ About the rest: Per default all parameters used to train the model are also used
 But one advantage of TransGrow is that especially the data parameters (e.g. the number of input frames, or the time interval between them) can differ from training. So configuration parameters, which control the shape of the data, can be updated here as desired.
 
 ## Reference
-
+Drees, L., Weber, I., Rußwurm, M., Roscher, R. (2022). Time Dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer. In: Andres, B., Bernard, F., Cremers, D., Frintrop, S., Goldlücke, B., Ihrke, I. (eds) Pattern Recognition. DAGM GCPR 2022. Lecture Notes in Computer Science, vol 13485. Springer, Cham. https://doi.org/10.1007/978-3-031-16788-1_30
 
