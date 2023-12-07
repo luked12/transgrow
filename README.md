@@ -83,6 +83,18 @@ You need to specify at least the log dir and the experiment name which you want 
 About the rest: Per default all parameters used to train the model are also used for testing.
 But one advantage of TransGrow is that especially the data parameters (e.g. the number of input frames, or the time interval between them) can differ from training. So configuration parameters, which control the shape of the data, can be updated here as desired.
 
-## Reference
-Drees, L., Weber, I., Rußwurm, M., Roscher, R. (2022). Time Dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer. In: Andres, B., Bernard, F., Cremers, D., Frintrop, S., Goldlücke, B., Ihrke, I. (eds) Pattern Recognition. DAGM GCPR 2022. Lecture Notes in Computer Science, vol 13485. Springer, Cham. https://doi.org/10.1007/978-3-031-16788-1_30
+## Citation
+```
+@InProceedings{drees2022time,
+  author    = {Drees, Lukas and Weber, Immanuel and Ru{\ss}wurm, Marc and Roscher, Ribana},
+  title     = {Time Dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer},
+  booktitle = {Proc.~of the DAGM German Conference on Pattern Recognition (GCPR)},
+  year      = {2022},
+  editor    = {Andres, Bj{\"o}rn and Bernard, Florian and Cremers, Daniel and Frintrop, Simone and Goldl{\"u}cke, Bastian and Ihrke, Ivo},
+  pages     = {495--510},
+  address   = {Cham},
+  publisher = {Springer International Publishing},
+  doi       = {10.1007/978-3-031-16788-1_30},
+}
+```
 
