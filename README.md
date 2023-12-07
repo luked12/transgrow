@@ -1,5 +1,8 @@
 # TransGrow
 
+![Teaser image](./transgrow-teaser.jpg)
+**Picture:** *Generate realistic inter- and extrapolations for irregular plant time series.*
+
 [Time dependent Image Generation of Plants from Incomplete Sequences with CNN-Transformer](https://doi.org/10.1007/978-3-031-16788-1_30) (GCPR 22)
 
 ## Requirements
