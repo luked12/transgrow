@@ -86,6 +86,9 @@ You need to specify at least the log dir and the experiment name which you want 
 About the rest: Per default all parameters used to train the model are also used for testing.
 But one advantage of TransGrow is that especially the data parameters (e.g. the number of input frames, or the time interval between them) can differ from training. So configuration parameters, which control the shape of the data, can be updated here as desired.
 
+## Further Notes
+MS-SSIM values in the paper are calculated with the normalized MS-SSIM (stabilizes the training), while the current repo for score calculation in the script test_transgrow.py has been switched to the non-normalized MS-SSIM calculation.
+
 ## Citation
 ```
 @InProceedings{drees2022time,
