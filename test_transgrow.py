@@ -22,7 +22,7 @@ from psnr_hvsm import psnr_hvsm
 from configs.config_test_transgrow import cfg
 
 from utils import utils
-from utils.ms_ssim import MSSSIM
+import pytorch_msssim
 from datasets.seq_datamodule import SeqDataModule
 from models.transgrow_gan_plm import TransGrowGANModel
 from models.transgrow_wgan_plm import TransGrowWGANModel
@@ -48,12 +48,9 @@ print(torch._C._nccl_version(), 'nccl')
 for i in range(torch.cuda.device_count()):
     print('device %s:'%i, torch.cuda.get_device_properties(i))    
 
-
-
 # # Evaluation score losses
 loss_l1 = torch.nn.L1Loss()
-loss_msssim = MSSSIM(3, window_size=11, size_average=True)
-
+loss_msssim = pytorch_msssim.MSSSIM()
 
 #%% 
 if __name__ == '__main__':
@@ -151,7 +148,7 @@ if __name__ == '__main__':
                 # # save scores
                 for i in range(img_pred.shape[0]):
                     score_l1_list.append(loss_l1(img_pred[i,:], img_target[i,:]))
-                    score_msssim_list.append((loss_msssim(torch.unsqueeze(img_pred[i,:],dim=0),torch.unsqueeze(img_target[i,:],dim=0))-1)*(-1))
+                    score_msssim_list.append(loss_msssim(torch.unsqueeze(img_pred[i,:],dim=0),torch.unsqueeze(img_target[i,:],dim=0)))
                     score_pla_list.append((np.abs(utils.pla_per_img(img_target[i,:])-utils.pla_per_img(img_pred[i,:]))))
                     # for PSNR-HVS-M: convert to YUV colorspace and to [0 1] and use only luma component (Y); see: https://pypi.org/project/psnr-hvsm/
                     img_pred_yuv = cv2.cvtColor(np.array(torch.permute((img_pred[i,:]),(1,2,0))), cv2.COLOR_RGB2YUV)
